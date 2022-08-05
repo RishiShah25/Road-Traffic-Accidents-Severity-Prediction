@@ -88,7 +88,7 @@ def main():
        Type_of_vehicle, Owner_of_vehicle, Service_year_of_vehicle,Area_accident_occured, Lanes_or_Medians,Number_of_vehicles_involved,
        Age_band_of_casualty,Casualty_severity, Cause_of_accident,Time_of_Day]).reshape(1,-1)
                             
-        le_data = label_encoder(data)
+        le_data = label_encoder(data,le)
                             
         pred = get_prediction(data=le_data, model=model)
 
