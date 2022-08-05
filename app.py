@@ -84,9 +84,9 @@ def main():
 
     if submit:
 
-        data = np.array([Day_of_week, Age_band_of_driver, Sex_of_driver,Educational_level, Vehicle_driver_relation, Driving_experience,
+        data = [Day_of_week, Age_band_of_driver, Sex_of_driver,Educational_level, Vehicle_driver_relation, Driving_experience,
        Type_of_vehicle, Owner_of_vehicle, Service_year_of_vehicle,Area_accident_occured, Lanes_or_Medians,Number_of_vehicles_involved,
-       Age_band_of_casualty,Casualty_severity, Cause_of_accident,Time_of_Day]).reshape(1,-1)
+       Age_band_of_casualty,Casualty_severity, Cause_of_accident,Time_of_Day]
                             
         le_data = label_encoder(data,le)
                             
