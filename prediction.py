@@ -3,11 +3,8 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
 
-def label_encoder(data,le): 
-    for feat in data:
-        data[feat] = data[feat].astype(str)
-        data[feat] = le.fit_transform(data[feat])
-    return data
+def label_encoder(input_val,le):
+    return le.fit_transform(input_val)
 
 
 def get_prediction(data,model):
