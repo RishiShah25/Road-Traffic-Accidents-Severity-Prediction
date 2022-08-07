@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 def label_encoder(data,le): 
-    return data.apply(le.transform)
+    return data.astype(str).apply(le.transform)
 
 
 def get_prediction(data,model):
