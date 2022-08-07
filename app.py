@@ -99,15 +99,15 @@ def main():
       Time_of_Day = label_encoder(Time_of_Day,le)
 		
 
-       data = np.array([Day_of_week, Age_band_of_driver, Sex_of_driver,Educational_level, Vehicle_driver_relation, Driving_experience,
+      data = np.array([Day_of_week, Age_band_of_driver, Sex_of_driver,Educational_level, Vehicle_driver_relation, Driving_experience,
        Type_of_vehicle, Owner_of_vehicle, Service_year_of_vehicle,Area_accident_occured, Lanes_or_Medians,Number_of_vehicles_involved,
        Age_band_of_casualty,Casualty_severity, Cause_of_accident,Time_of_Day]).reshape(1,-1)
                             
         
                             
-        pred = get_prediction(data=data, model=model)
+      pred = get_prediction(data=data, model=model)
 
-        st.write(f"The predicted severity is:  {pred[0]}")
+      st.write(f"The predicted severity is:  {pred[0]}")
 
 if __name__ == '__main__':
     main()
