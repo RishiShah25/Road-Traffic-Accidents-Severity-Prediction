@@ -63,9 +63,9 @@ def main():
         
         #hour = st.slider("Pickup Hour: ", 0, 23, value=0, format="%d")
         Day_of_week = st.selectbox("Select Day of the Week: ", options=options_day)
-        Age_band_of_driver = st.selectbox("Select Driver Age: ", options=options_age)    
-        Sex_of_driver = st.selectbox("Select Driver Gender: ", options=option_sex)
-        Educational_level = st.selectbox("Select Educational level: ", options=option_Educational_level) 
+     Age_band_of_driver = st.selectbox("Select Driver Age: ", options=options_age)    
+     Sex_of_driver = st.selectbox("Select Driver Gender: ", options=option_sex)
+     Educational_level = st.selectbox("Select Educational level: ", options=option_Educational_level) 
         Vehicle_driver_relation = st.selectbox("Select Relationship with driver: ", options=option_vechile_driver_relation)
         Driving_experience = st.selectbox("Select Driving Experience: ", options=options_driver_exp)        
         Type_of_vehicle = st.selectbox("Select Vehicle Type: ", options=options_vehicle_type)
