@@ -83,14 +83,29 @@ def main():
 
 
     if submit:
+      Day_of_week = label_encoder(Day_of_week,le)
+		  Age_band_of_driver = label_encoder(Age_band_of_driver,le)
+		  Sex_of_driver = label_encoder(Sex_of_driver,le)
+		  Educational_level = label_encoder(Educational_level,le)
+		  Vehicle_driver_relation = label_encoder(Vehicle_driver_relation,le)
+		  Driving_experience = label_encoder(Driving_experience,le)
+		  Type_of_vehicle = label_encoder(Type_of_vehicle,le)
+		  Owner_of_vehicle = label_encoder(Owner_of_vehicle,le)
+		  Service_year_of_vehicle = label_encoder(Service_year_of_vehicle,le)
+		  Area_accident_occured = label_encoder(Area_accident_occured,le)
+		  Lanes_or_Medians = label_encoder(Lanes_or_Medians,le)
+		  Age_band_of_casualty = label_encoder(Age_band_of_casualty,le)
+		  Cause_of_accident = label_encoder(Cause_of_accident,le)
+		  Time_of_Day = label_encoder(Time_of_Day,le)
+		
 
-        data = pd.DataFrame([Day_of_week, Age_band_of_driver, Sex_of_driver,Educational_level, Vehicle_driver_relation, Driving_experience,
+       data = np.array([Day_of_week, Age_band_of_driver, Sex_of_driver,Educational_level, Vehicle_driver_relation, Driving_experience,
        Type_of_vehicle, Owner_of_vehicle, Service_year_of_vehicle,Area_accident_occured, Lanes_or_Medians,Number_of_vehicles_involved,
-       Age_band_of_casualty,Casualty_severity, Cause_of_accident,Time_of_Day])
+       Age_band_of_casualty,Casualty_severity, Cause_of_accident,Time_of_Day]).reshape(1,-1)
                             
-        le_data = label_encoder(data,le)
+        
                             
-        pred = get_prediction(data=le_data, model=model)
+        pred = get_prediction(data=data, model=model)
 
         st.write(f"The predicted severity is:  {pred[0]}")
 
