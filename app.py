@@ -73,9 +73,9 @@ def main():
         Service_year_of_vehicle = st.selectbox("Select Vehicle Service Year: ", options=option_vehicle_service_year) 
         Area_accident_occured = st.selectbox("Select Accident Area: ", options=options_acc_area)   
         Lanes_or_Medians = st.selectbox("Select Lanes: ", options=options_lanes)       
-        Number_of_vehicles_involved = st.slider("Pickup Hour: ", 1, 7, value=0, format="%d")
+        Number_of_vehicles_involved = st.slider("No Of Vehicle involved: ", 1, 10, value=3, format="%d")
         Age_band_of_casualty = st.selectbox("Select Casuality Age: ", options=options_age)        
-        Casualty_severity = st.slider("Hour of Accident: ", 1, 8, value=0, format="%d")
+        Casualty_severity = st.slider("Casualty Severity: ", 1, 10, value=5, format="%d")
         Cause_of_accident = st.selectbox("Select Accident Cause: ", options=options_cause) 
         Time_of_Day = st.selectbox("Select Time of the day: ", options=option_day_time)        
        
@@ -84,12 +84,12 @@ def main():
 
     if submit:
       lst = [[Day_of_week, Age_band_of_driver, Sex_of_driver,Educational_level, Vehicle_driver_relation, Driving_experience,
-       Type_of_vehicle, Owner_of_vehicle, Service_year_of_vehicle,Area_accident_occured, Lanes_or_Medians,Number_of_vehicles_involved,
-       Age_band_of_casualty,Casualty_severity, Cause_of_accident,Time_of_Day]]
+       Type_of_vehicle, Owner_of_vehicle, Service_year_of_vehicle,Area_accident_occured, Lanes_or_Medians,
+       Age_band_of_casualty,Cause_of_accident,Time_of_Day]]
     
       data = pd.DataFrame(lst, columns =['Day_of_week', 'Age_band_of_driver', 'Sex_of_driver','Educational_level', 'Vehicle_driver_relation', 'Driving_experience',
-       'Type_of_vehicle', 'Owner_of_vehicle', 'Service_year_of_vehicle','Area_accident_occured', 'Lanes_or_Medians','Number_of_vehicles_involved',
-       'Age_band_of_casualty','Casualty_severity', 'Cause_of_accident','Time_of_Day'])
+       'Type_of_vehicle', 'Owner_of_vehicle', 'Service_year_of_vehicle','Area_accident_occured', 'Lanes_or_Medians',
+       'Age_band_of_casualty', 'Cause_of_accident','Time_of_Day'])
        
 
        
